@@ -1,0 +1,93 @@
+.footer {
+    @include width-height (100%, auto);
+    margin: auto;
+    font-family: $open-sans;
+    font-weight: 400;
+    font-size: .9rem;
+    color: $pale-blue;
+
+    &-fondo {
+        @include width-height(100%, 10rem);
+        background: url(../images/bg-footer-top-desktop.svg) no-repeat center bottom / contain;
+        margin: auto;
+    }
+
+
+    &-contenedor {
+        @include width-height(100%, 25rem);
+        // @include flex (row, space-around, center);
+        @include grid (2, 50%, auto);
+        grid-template-areas: 
+        'contacto email';
+        place-items: baseline;
+        margin: auto;
+        padding: 2rem 5rem 0;
+        column-gap: 2rem;
+        background-color: $dark-cyan;
+    }
+
+    &-contacto-icon {
+        grid-area: contacto;
+        @include flex(column,center, flex-start);
+        gap: 1.3rem;
+
+        .redes {
+            @include flex(row, space-between, center);
+            gap: 1.5rem;
+            margin-top: 3rem;
+
+            &__icono {
+                @include width-height(auto, 40px);
+            }
+        }
+    }
+
+    &__texto {
+        @include width-height(60%, auto);
+        
+    }
+
+    &__icono {
+        padding-right: 1rem;
+    }
+
+    &-email {
+        grid-area: email;
+        @include flex(column, center, flex-start);
+        // place-self: center;
+        gap: 1.2rem;
+    }
+
+    &__newletter {
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+}
+
+.suscribete {
+    // @include flex (row);
+    display: flex;
+    gap: 1.5rem;
+    @include width-height(100%, auto);
+
+    &__email { 
+        @include width-height(60%, auto);
+        padding: 1rem;
+        border-radius: 10px;
+        outline: none;
+        border: none;
+        border: 1px solid $dark-cyan;
+    }
+
+    &__btn {
+        background-color: $rosa;
+        outline: none;
+        border: none;
+        color: $pale-blue;
+        padding: 1rem 3rem;
+        border-radius: 10px;
+        font-size: 1rem;
+        letter-spacing: 1px;
+        font-weight: 600;
+    }
+}

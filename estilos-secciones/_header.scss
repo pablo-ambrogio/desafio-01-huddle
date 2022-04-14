@@ -1,0 +1,70 @@
+.header {
+    @include width-height (100%, auto);
+}
+
+.contenedor {
+    max-width: 1440px;
+    margin: auto;
+}
+
+.contenedor-logo-btn {
+    @include width-height (90%, auto);
+    @include flex (row, space-between, center);
+    margin: auto;
+    padding-top: 5rem;
+}
+
+.logo__img {
+    @include width-height (220px, auto);
+
+    &--footer {
+        @include width-height(180px, auto);
+    }
+}
+
+.prueba-gratis__btn {
+    display: block;
+    text-decoration: none;
+    border: 1px solid $rosa-light;
+    border-radius: 20px;
+    padding: .5rem 1.2rem;
+}
+
+.comenzar {
+    @include width-height (80%, auto);
+    margin: 12rem auto 0;
+    text-align: center;
+    @include flex(column, center, center);
+    gap: 1.8rem;
+
+    &__titulo {
+        font-family: $poppins;
+        font-size: 2.9rem;
+        color: $dark-cyan;
+
+        &--mod {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    &__texto {
+        @include width-height(45%, auto);
+        margin: auto;
+        font-family: $open-sans;
+        font-weight: 600;
+        color: $dark-cyan;
+    }
+
+    &__btn {
+        display: inline-block;
+        font-family: $open-sans;
+        font-weight: 600;
+        text-decoration: none;
+        color: $pale-blue;
+        background-color: $rosa;
+        padding: 1.5rem 7rem;
+        border-radius: 50px;
+        box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
+    }
+}

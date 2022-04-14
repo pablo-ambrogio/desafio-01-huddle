@@ -1,0 +1,117 @@
+.mockups {
+    margin: auto;
+    @include width-height (80%, auto);
+    padding: 4rem;
+    text-align: center;
+
+    &__imagen {
+        @include width-height(800px, auto);
+    }
+}
+
+.contenedor-med {
+    @include width-height(80%, 30rem);
+    @include flex(column, center, center);
+    margin: auto;
+    text-align: center;
+}
+
+.contenido-comunidad {
+    @include width-height(80%, auto);
+    @include flex(row, space-around, center);
+    margin: auto;
+    padding-top: 2rem;
+}
+
+.comunidad {
+    font-family: $open-sans;
+    text-align: center;
+    color: $dark-cyan;
+    line-height: 1.5;
+
+    &__numero {
+        font-size: 5rem;
+    }
+
+    &__texto {
+        font-size: 1.2rem;
+        font-weight: 400;
+        opacity: .7;
+    }
+
+    .contenido-imagen {
+        text-align: initial;
+    }
+}
+
+// contenido tres ilustraciones
+
+.contenido-tres-ilustraciones {
+    @include width-height (100%, auto);
+    margin: 3rem auto 0;
+}
+
+.contenedor-texto-ilustracion {
+    @include width-height(100%, auto);
+    margin: auto;
+    @include flex (row, center, center);
+}
+
+.ondulacion-top {
+    @include width-height(100%, 11rem);
+    background: url(../images/bg-section-top-desktop-1.svg) no-repeat bottom center / contain;
+
+    &--mod {
+        background: none;
+    }
+
+    &--user {
+        background: url(../images/bg-section-top-desktop-2.svg) no-repeat bottom center / contain;
+    }
+}
+
+.ondulacion-bottom {
+    @include width-height(100%, 10rem);
+    background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat top center / contain;
+
+    &--mod {
+        background: none;
+    }
+}
+
+.fondo-texto-ilustracion {
+    @include width-height(100%, 100%);
+    @include flex (row, space-around, center);
+    margin: auto;
+    background-color: $pale-blue;
+    padding: 4rem;
+
+    &--mod{
+        flex-direction: row-reverse;
+        background-color: transparent;
+    }
+    
+}
+
+.texto {
+    @include width-height(50%, auto);
+
+    &__titulo {
+        font-family: $poppins;
+        margin-bottom: 1rem;
+    }
+}
+
+.ilustracion {
+    @include width-height(50%, auto);
+    text-align: center;
+
+    &__imagen {
+        @include width-height(350px, auto);
+    }
+}
+
+
+
+
+

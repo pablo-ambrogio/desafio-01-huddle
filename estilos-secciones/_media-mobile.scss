@@ -1,0 +1,173 @@
+
+@media screen and (max-width: 576px) {
+    // header
+
+    .contenedor-logo-btn {
+        @include width-height (95%, auto);
+        padding-top: 1rem;
+    }
+    .logo__img {
+        @include width-height (120px, auto);
+    }
+
+    .comenzar {
+        @include width-height (100%, auto);
+        margin-top: 8rem;
+
+        &__titulo {
+            @include width-height (90%, auto);
+            font-size: 1.4rem;
+        }
+
+        &__texto {
+            @include width-height(100%, auto);
+            font-size: .9rem;
+            margin-bottom: 2rem;
+        }
+
+        &__btn {
+            padding: 1rem 3rem;
+        }
+    }
+
+    // main
+
+    .main {
+        padding-top: 5rem;
+    }
+    .mockups {
+        @include width-height (100%, auto);
+        padding: 0;
+
+        &__imagen {
+            @include width-height(80%, auto);
+            max-width: 400px;
+        }
+    }
+
+    .contenido-comunidad {
+        @include width-height(100%, auto);
+        flex-direction: column;
+        row-gap: 4rem;
+    }
+
+    .comunidad {
+        @include width-height(60%, auto);
+
+        &__numero {
+            font-size: 3rem;
+        }
+
+        &__texto {
+            font-size: 1rem;
+        }
+
+        .contenido-imagen {
+            @include width-height(65%, auto);
+            margin: auto;
+            text-align: initial;
+        }
+
+        &__imagen {
+            @include width-height(35px, auto);
+        }
+    }
+
+    .contenido-tres-ilustraciones {
+        @include width-height (100%, auto);
+        margin: 0;
+    }
+
+    .fondo-texto-ilustracion {
+        @include flex (column, center, center);
+        padding: 2rem;
+        row-gap: 4rem;
+    }
+
+    .texto {
+        width: 100%;
+        order: 2;
+        text-align: center;
+    }
+
+    .ondulacion-top {
+        background: url(../images/bg-section-top-mobile-1.svg) no-repeat bottom center / contain;
+
+        &--left {
+            background: url(../images/bg-section-top-mobile-2.svg) no-repeat bottom center / contain;
+        }
+    }
+
+    .ondulacion-bottom {
+        background: url(../images/bg-section-bottom-mobile-1.svg) no-repeat top left / contain;
+        
+        &--left {
+            background: url(../images/bg-section-bottom-mobile-2.svg) no-repeat top center / contain;
+        }
+    }
+
+    .ilustracion {
+        width: 100%;
+    
+        &__imagen {
+            width: 80%;
+        }
+    }
+
+    .contenedor-med {
+        height: 15rem;
+        margin-bottom: 8rem;
+    }
+
+    // footer
+
+    .footer {
+
+        &-contenedor {
+            @include width-height(100%, auto);
+            @include grid (1, 1fr, auto);
+            grid-template-areas: 
+            'email' 
+            'contacto';
+            padding: 0;
+            padding-bottom: 2rem;
+            row-gap: 8rem;
+            
+        }
+
+        &-contacto-icon {
+            @include width-height(90%, auto);
+            margin: auto;
+        }
+
+        .logo__img {
+            &--footer {
+                @include width-height(190px, auto);
+            }
+        }
+
+        &-email {
+            width: 85%;
+            place-self: center;
+            @include flex(column, center, flex-start);
+            gap: 1.2rem;
+        }
+
+        &__texto {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+    }
+
+    .suscribete {
+        @include flex(column, center, end);
+
+        &__email { 
+            @include width-height(100%, auto);
+        }
+
+        &__btn {
+            padding: .9rem 2rem;
+        }
+    }
+}
