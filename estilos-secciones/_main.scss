@@ -10,7 +10,7 @@
 }
 
 .contenedor-med {
-    @include width-height(80%, 30rem);
+    @include width-height(80%, 40rem);
     @include flex(column, center, center);
     margin: auto;
     text-align: center;
@@ -44,74 +44,86 @@
     }
 }
 
-// contenido tres ilustraciones
+// contenido ilustraciones
 
-.contenido-tres-ilustraciones {
-    @include width-height (100%, auto);
-    margin: 3rem auto 0;
-}
-
-.contenedor-texto-ilustracion {
+.ilustraciones {
     @include width-height(100%, auto);
-    margin: auto;
-    @include flex (row, center, center);
-}
+    padding-top: 15rem;
+    display: grid;
+    row-gap: 14rem;
 
-.ondulacion-top {
-    @include width-height(100%, 11rem);
-    background: url(../images/bg-section-top-desktop-1.svg) no-repeat bottom center / contain;
-
-    &--mod {
-        background: none;
+    &-contenedor {
+        @include width-height(80%, auto);
+        @include flex(row, center, center);
+        margin: auto;
+        padding: 2rem;
     }
 
-    &--user {
-        background: url(../images/bg-section-top-desktop-2.svg) no-repeat bottom center / contain;
-    }
-}
+    &-textos-imagen {
+        @include width-height(100%, auto);
+        background-color: $pale-blue;
+        position: relative;
 
-.ondulacion-bottom {
-    @include width-height(100%, 10rem);
-    background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat top center / contain;
+        &::after {
+            position: absolute;
+            content: '';
+            @include width-height(100%, 100%);
+            background: url(../images/bg-section-bottom-desktop-1.svg) no-repeat top / contain;
+            top: 100%;
+            z-index: -1;
+        }
 
-    &--mod {
-        background: none;
-    }
-}
+        &::before {
+            position: absolute;
+            content: '';
+            @include width-height(100%, 100%);
+            background: url(../images/bg-section-top-desktop-1.svg) no-repeat bottom / contain;
+            bottom: 100%;
+            z-index: -1;
+        }
 
-.fondo-texto-ilustracion {
-    @include width-height(100%, 100%);
-    @include flex (row, space-around, center);
-    margin: auto;
-    background-color: $pale-blue;
-    padding: 4rem;
+        &:nth-child(2), 
+        &:nth-child(2)::after,
+        &:nth-child(2)::before{
+            background: none;
+            flex-direction: row-reverse;
+        }
 
-    &--mod{
-        flex-direction: row-reverse;
-        background-color: transparent;
-    }
-    
-}
+        &:nth-child(3)::before {
+            background: url(../images/bg-section-top-desktop-2.svg)  no-repeat bottom / contain;
+        }
 
-.texto {
-    @include width-height(50%, auto);
-
-    &__titulo {
-        font-family: $poppins;
-        margin-bottom: 1rem;
+        &:nth-child(3)::after {
+            background: url(../images/bg-section-bottom-desktop-2.svg) no-repeat top / contain;
+        }
     }
 }
 
 .ilustracion {
-    @include width-height(50%, auto);
+    @include width-height(100%, auto);
     text-align: center;
 
     &__imagen {
-        @include width-height(350px, auto);
+        @include width-height (100%, auto);
+        max-width: 400px;
     }
+
+    &-textos {
+        @include width-height(100%, auto);
+        font-family: $open-sans;
+        
+    }
+
+    &__titulo {
+        font-family: $poppins;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    &__parrafo {
+        @include width-height(85%, auto);
+        font-size: .9rem;
+    }
+
 }
-
-
-
-
 

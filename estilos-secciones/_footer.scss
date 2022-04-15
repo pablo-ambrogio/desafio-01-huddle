@@ -5,17 +5,19 @@
     font-weight: 400;
     font-size: .9rem;
     color: $pale-blue;
+    position: relative;
 
-    &-fondo {
-        @include width-height(100%, 10rem);
-        background: url(../images/bg-footer-top-desktop.svg) no-repeat center bottom / contain;
-        margin: auto;
+    &::after {
+        position: absolute;
+        content: '';
+        @include width-height(100%, 100%);
+        background: url(../images/bg-footer-top-desktop.svg) no-repeat bottom / contain;
+        bottom: 100%;
+        z-index: -1;
     }
-
 
     &-contenedor {
         @include width-height(100%, 25rem);
-        // @include flex (row, space-around, center);
         @include grid (2, 50%, auto);
         grid-template-areas: 
         'contacto email';
