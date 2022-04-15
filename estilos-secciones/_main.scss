@@ -10,10 +10,11 @@
 }
 
 .contenedor-med {
-    @include width-height(80%, 40rem);
+    @include width-height(80%, 45rem);
     @include flex(column, center, center);
     margin: auto;
     text-align: center;
+    row-gap: 1rem;
 }
 
 .contenido-comunidad {

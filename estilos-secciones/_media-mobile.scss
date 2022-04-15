@@ -55,7 +55,7 @@
         @include width-height(60%, auto);
 
         &__numero {
-            font-size: 4rem;
+            font-size: 5rem;
         }
 
         &__texto {
@@ -63,7 +63,7 @@
         }
 
         .contenido-imagen {
-            @include width-height(65%, auto);
+            @include width-height(70%, auto);
             margin: auto;
             text-align: initial;
         }
@@ -73,20 +73,38 @@
         }
     }
 
+    .contenedor-med {
+        width: 90%;
+    }
+
     // Ilustraciones
 
     .ilustraciones {
         padding-top: 10rem;
-        row-gap: 10rem;
 
         &-contenedor {
             width: 100%;
             @include flex(column, center, center);
             text-align: center;
             row-gap: 2.5rem;
+        }
 
-            &:nth-child(2) {
-                flex-direction: column;
+        &-textos-imagen {
+
+            &::before {
+                background-image: url(../images/bg-section-top-mobile-1.svg);
+            }
+
+            &::after {
+                background-image: url(../images/bg-section-bottom-mobile-1.svg);
+            }
+
+            &:nth-child(3)::before {
+                background-image: url(../images/bg-section-top-mobile-2.svg);
+            }
+
+            &:nth-child(3)::after {
+                background-image: url(../images/bg-section-bottom-mobile-2.svg);
             }
         }
 
