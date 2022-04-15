@@ -20,7 +20,7 @@
         }
 
         &__texto {
-            @include width-height(80%, auto);
+            @include width-height(85%, auto);
             font-size: .9rem;
             margin-bottom: 2rem;
         }
