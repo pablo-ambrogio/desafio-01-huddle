@@ -66,5 +66,9 @@
         padding: 1.5rem 7rem;
         border-radius: 50px;
         box-shadow: 5px 5px 20px rgba(0, 0, 0, .2);
+
+        &:hover {
+            background-color: $rosa-light;
+        }
     }
 }

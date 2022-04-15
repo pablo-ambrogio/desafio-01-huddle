@@ -77,6 +77,9 @@
   border-radius: 50px;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
 }
+.comenzar__btn:hover {
+  background-color: #ff8fd8;
+}
 
 .mockups {
   margin: auto;
@@ -295,6 +298,10 @@
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 600;
+  cursor: pointer;
+}
+.suscribete__btn:hover {
+  background-color: #ff8fd8;
 }
 
 @media screen and (max-width: 576px) {

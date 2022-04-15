@@ -89,5 +89,10 @@
         font-size: 1rem;
         letter-spacing: 1px;
         font-weight: 600;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $rosa-light;
+        }
     }
 }
