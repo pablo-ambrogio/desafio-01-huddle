@@ -35,7 +35,7 @@
     margin: 12rem auto 0;
     text-align: center;
     @include flex(column, center, center);
-    gap: 1.8rem;
+    gap: 2rem;
 
     &__titulo {
         font-family: $poppins;
